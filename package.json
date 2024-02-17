@@ -23,5 +23,9 @@
     "eslint-config-prettier": "^9.1.0",
     "prettier": "3.1.0",
     "tsup": "^8.0.2"
+  },
+  "dependencies": {
+    "@node-steam/vdf": "^2.2.0",
+    "axios": "^1.6.7"
   }
 }
