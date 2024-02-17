@@ -50,19 +50,20 @@ export function getSignaturesWithBytes(
       return {
         ...signature,
         name,
-        windowsBytes: signature['windows']
-          .split('\\x')
-          .slice(1)
-          .map((byte) => parseInt(byte, 16)),
-        linuxBytes: signature['linux']
-          .split('\\x')
-          .slice(1)
-          .map((byte) => parseInt(byte, 16)),
+        windowsBytes: getBytesFromStringSignature(signature['windows']),
+        linuxBytes: getBytesFromStringSignature(signature['linux']),
       };
     },
   );
 
   return signatureWithBytes;
+}
+
+function getBytesFromStringSignature(signature: string): number[] {
+  return signature
+    .split('\\x')
+    .slice(1)
+    .map((byte) => parseInt(byte, 16));
 }
 
 export async function getServerFileAsBytesByOs(os: OS): Promise<number[]> {
