@@ -46,12 +46,14 @@ export function getSignaturesWithBytes(
   const signatureWithBytes: SignatureWithBytes[] = signatureNames.map(
     (name) => {
       const signature = signatures[name];
+      const windowsBytes = getBytesFromStringSignature(signature['windows']);
+      const linuxBytes = getBytesFromStringSignature(signature['linux']);
 
       return {
         ...signature,
         name,
-        windowsBytes: getBytesFromStringSignature(signature['windows']),
-        linuxBytes: getBytesFromStringSignature(signature['linux']),
+        windowsBytes,
+        linuxBytes,
       };
     },
   );
