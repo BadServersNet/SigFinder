@@ -1,0 +1,27 @@
+{
+  "name": "cs2-sig-finder",
+  "version": "1.0.0",
+  "description": "Finds CS2 byte signatures relating to CS2 KZ.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.js\"",
+    "build": "tsup src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "cs2",
+    "kz",
+    "cs2kz"
+  ],
+  "author": "BuSheeZy",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.1.0",
+    "tsup": "^8.0.2"
+  }
+}
