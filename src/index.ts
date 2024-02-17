@@ -21,7 +21,7 @@ async function run() {
     );
 
     console.log(
-      `[linux] ${signature.name} found at ${linuxIndexes.length} indexes: ${linuxIndexes}`,
+      `[linux]   ${signature.name} found at ${linuxIndexes.length} indexes: ${linuxIndexes}`,
     );
     console.log(
       `[windows] ${signature.name} found at ${windowsIndexes.length} indexes: ${windowsIndexes}`,
